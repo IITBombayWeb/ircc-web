@@ -1,7 +1,7 @@
 
 CONTENTS OF THIS FILE
 ---------------------
-changes by ruchi
+changes by ruchi just now
  * About Drupal
  * Configuration and features
  * Installation profiles
