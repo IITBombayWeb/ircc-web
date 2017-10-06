@@ -1,7 +1,11 @@
 
 CONTENTS OF THIS FILE
 ---------------------
+<<<<<<< HEAD
 
+=======
+changes by ruchi just now only
+>>>>>>> 35f50c71902b948d07df5f38c71cf54ff4fb2a08
  * About Drupal
  * Configuration and features
  * Installation profiles

@@ -760,6 +760,12 @@ $settings['file_scan_ignore_directories'] = [
  * Keep this code block at the end of this file to take full effect.
  */
 #
+<<<<<<< HEAD
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+=======
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+>>>>>>> 35f50c71902b948d07df5f38c71cf54ff4fb2a08
