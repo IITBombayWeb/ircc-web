@@ -1,0 +1,434 @@
+{# <script src="/sites/all/libraries/tablesorter/jquery.tablesorter.js" type="text/javascript"></script> #}
+{# <?php
+drupal_add_js('jQuery(document).ready(function(){
+ 
+      $(".contentHover").hover(
+        function() {
+          $(this).children(".content").fadeTo(200, 0.25).end().children(".hover-content").fadeTo(200, 1).show();
+        },
+        function() {
+          $(this).children(".content").fadeTo(200, 1).end().children(".hover-content").fadeTo(200, 0).hide();
+        });
+	if($(window).width() <800){
+		$(".mbmenu ul").addClass("flexnav");
+		$(".mbmenu ul").attr("data-breakpoint","800");
+	}
+		
+});', 'inline');
+
+?> #}
+<div class="row">
+  {{ page.top_nav }}
+</div>
+<div class=" container region1wrap" >  
+
+
+  <!-- Top Header -->
+  <div class="row top_header">
+
+    <div class="six columns">
+      
+      {# <?php print render($page['login_box']); ?> #}
+      {{ page.login_box }}
+    </div>
+
+    <div class="six columns">
+     {#  <?php
+      $twitter_url = theme_get_setting('twitter_url', 'touchm');
+      $facebook_url = theme_get_setting('facebook_url', 'touchm');
+      $google_plus_url = theme_get_setting('google_plus_url', 'touchm');
+      $linkedin_url = theme_get_setting('linkedin_url', 'touchm');
+      $flickr_url = theme_get_setting('flickr_url', 'touchm');
+      $vimeo_url = theme_get_setting('vimeo_url', 'touchm');
+      $rss_url = theme_get_setting('rss_url', 'touchm');
+
+      $theme_path = base_path() . path_to_theme();
+      ?> #}
+      {% set twitter_url='#' %}
+      {% set facebook_url='#' %}
+      {% set google_plus_urll='#' %}
+      {% set linkedin_url='#' %}
+      {% set flickr_url='#' %}
+      {% set vimeo_url='#' %}
+      {% set rss_url='#' %}  
+      {% set theme_path = root_path %}
+
+	    <div class="top_social"></div>
+			<ul class="top_social">
+        <li><a class="has-tipsy" href="{{ twitter_url }}" target="_blank" title="Twitter"><img src="{{ theme_path }} /images/social/Twitter.png" alt="Twitter"></a></li>
+        <li><a class="has-tipsy" href="{{ facebook_url }}" target="_blank" title="Facebook"><img src="{{ theme_path }} /images/social/Facebook.png" alt="Facebook"></a>
+        <li><a class="has-tipsy" href="{{ google_plus_url }}" target="_blank" title="Google"><img src="{{ theme_path }} /images/social/Google.png" alt="Google+"></a></li>
+        <li><a class="has-tipsy" href="{{ linkedin_url }}" target="_blank" title="LinkedIn"><img src="{{ theme_path }} /images/social/LinkedIn.png" alt="LinkedIn"></a></li>
+        <!--li><a class="has-tipsy" href="http://www1.iitb.ac.in/hindi" target="_blank" title="Hindi Version (old)"><img src="<?php print $theme_path; ?>/images/hindi-switch.png" alt="Hindi version (old)"></a></li-->
+	</ul>
+	</div>
+
+  </div>
+  <!-- End Top Header -->
+
+</div>
+
+<!-- End Region 1 Wrap -->
+
+<!-- Region 2 Wrap -->
+
+<div class="container region2wrap">
+
+  <div class="row">
+    {{ page.full_width_menu }}
+
+    <!-- Logo -->
+		  {% if logo %}
+		 
+			 {#  {% if (isset($_SERVER['HTTPS']) and $_SERVER['HTTPS'] == "on") %}
+					{% set serverlink = 'https://' . $_SERVER['HTTP_HOST'] %}
+				
+				{% else %} #}
+					{% set serverlink = root_path %}
+				
+		    {# {% endif %} #}
+	      
+		   <div class="logo">
+					<a class="logo" href="{{ serverlink }}"><img src="{{ logo }}" alt="{{ 'IITB'|t }}" /></a>
+		</div>
+		   <div class="fst">
+<a  href="{{ serverlink }}"><h5> Indian Institute of Technology Bombay</h5></a>
+			</div>
+    <!-- End Logo -->
+			<div class="snd">
+				 {% if site_name or site_slogan %}
+					<h1><a href="{{ serverlink }}" id="slogan-site-name">{{ site_name }}</a></h1>
+				  {% endif %}
+			</div>
+      {% endif %}
+    </div>
+
+
+    <!-- Main Navigation -->
+
+  <div class="row">
+    <div class="twelve columns">
+		<div class="mbmenu">
+			<div class="menu-button">Menu</div>
+
+			{{ navigation }} <!--after-->
+		</div>
+	
+
+		<nav class="top-bar">
+
+
+
+       {#  <!--<ul>-->
+          <!-- Toggle Button Mobile  -->
+           <!--<li class="name">
+            <h1><a href="#"> <?php //print t('Navigation Menu'); ?></a></h1>
+          </li>
+          <li class="toggle-topbar"><a href="#"></a></li> -->
+          <!-- End Toggle Button Mobile -->
+        <!--</ul>--> #}
+
+
+        {% if navigation %}
+          <section><!-- Nav Section -->
+
+            {{ navigation }}<!--after nav section-->
+          </section><!-- End Nav Section -->
+
+        </nav>            
+        {% endif %}
+    </div>
+	
+    <!-- End Main Navigation -->         
+
+  </div>
+
+</div>
+
+<!-- End Region 2 Wrap -->
+
+
+{% if page.highlighted %}
+  <!-- Region 3 Wrap -->
+
+  <div class="container region3wrap">  
+
+    {# <?php print render($page['highlighted']); ?> #}
+    {{ page.highlighted }}
+
+    {% if is_front %}
+      <!-- Content Top -->  
+      <div class="row content_top">
+        <div class="twelve columns">
+          <h2><?php print theme_get_setting('home_tagline', 'touchm'); ?></h2>
+        </div>
+      </div>
+      <!-- End Content Top -->
+    {% endif %}
+
+  </div>
+
+  <!-- End Region 3 Wrap -->
+
+{% endif %}
+
+{% if not is_front %}
+  <!-- Region 3 Wrap -->
+
+  <div class="container region3wrap">  
+
+    {% if page.slider %}
+        <div class= "touchm_slider ">
+         {{ page.slider }}
+        </div>
+
+    {% endif %}
+
+
+    <!-- Content Top -->  
+     
+    <div class="row content_top">
+        <div class="nine columns">
+        {% if breadcrumb %}
+          {{ breadcrumb }}
+        {% endif %}
+      </div>
+
+      {% if seach_block_form %}
+        <div class="three columns">
+
+          <div class="row">
+            <div class="twelve columns">
+              <div class="row collapse top_search">
+              {{ seach_block_form }}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      {% endif %}
+    </div>
+    <!-- End Content Top -->
+
+
+  </div>
+
+  <!-- End Region 3 Wrap -->
+{% endif %}
+
+
+<!-- Region 4 Wrap -->
+
+<div class="container region4wrap">
+
+  <div class="row maincontent">
+    {% if title %}
+      <div class="twelve columns">
+
+        <div class="page_title">
+          <div class="row">
+            <div class="twelve columns">
+              <h1>{{ title }}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.contact %}
+      <div class="twelve columns">
+        <div class="map_location">
+          <div class="map_canvas">
+            {# <?php print render($page['contact_map']); ?> #}
+            {{ page.contact_map }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+
+    <!-- Main Content ( Middle Content) -->
+    
+
+    {% set content_class = 'main-content' %}
+    {% if  page.sidebar_second or page.sidebar_first %}
+       {% if page.sidebar_first %}
+        {% set content_class = 'eight columns push-four' %}
+      {% else %}
+        {% set content_class = 'eight columns' %}
+      {% endif %}
+    {% endif %}
+    
+    <div class="clearfix"></div>
+    <div id="content" class="{{ content_class }}">
+      <?php print $messages; ?>
+      <?php if (!empty($tabs['#primary']) || !empty($tabs['#secondary'])): ?>
+        <div class="tabs">
+          <?php print render($tabs); ?>
+        </div>
+      <?php endif; ?>
+      {# <?php print render($page['help']); ?> #}
+      {{ page.help }}
+      {% if action_links %}
+        <ul class="action-links">
+          {{ action_links }}
+        </ul>
+      {% endif %}
+      {# <?php print render($page['content']); ?> #}
+      {{ page.content }}
+
+		
+	 
+      {{ feed_icons }}
+    </div>
+
+    {# {% if page.sidebar_second %}
+      <div class="four columns sidebar-right">
+        <?php print render($page['sidebar_second']); ?>
+        {{ page.sidebar_second }}
+      </div>
+    {% endif %} #}
+
+    {% if page.sidebar_first %}
+      <div class="four columns pull-eight sidebar-left">
+        {# <?php print render($page['sidebar_first']); ?> #}
+        {{ page.sidebar_first }}
+
+      </div>
+    {% endif %}
+
+    <!-- End Main Content ( Middle Content) -->
+	
+  </div>
+
+  {% if page.carousel_works %}
+    <!-- Bottom Content -->
+    <div class="row">
+      {# <?php print render($page['carousel-works']); ?>  #}
+      {{ page.carousel_works }}
+    </div>
+    <!-- End Bottom Content -->
+    
+   {% endif %}
+  
+   
+</div>
+
+<!-- End Region 4 Wrap -->
+
+<!-- Region 9 Wrap    drupal_is_front_page()  -->
+
+<div class="container region9wrap">
+
+
+  {% if is_front %}
+		<!-- Bottom Content -->
+		<div class="row content_bottom ">
+			<div class="eight columns" id="search-caption">
+				<h2 class="search-text">Search this website by keywords or browse from sections below</h2>
+			</div>
+			
+		  {# <?php //if (!empty($seach_block_form)): ?> #}
+			<div class="three columns home-search">
+
+			  <div class="row">
+				<div class="twelve columns">
+				  <div class="row collapse top_search gaboli-test">
+					{{ seach_block_form }}
+				  </div>
+				</div>
+			  </div>
+
+			</div>
+		  {# <?php //endif; ?> #}
+		</div>
+		<!-- End Bottom Content -->
+		
+	 {% endif %}
+	 
+	 
+
+  {% if page.footer_firstcolumn or page.footer_secondcolumn or page.footer_thirdcolumn or page.footer_fourthcolumn %}
+    <!-- Footer -->  
+    <div class="row footer">
+
+      <!-- // // // // // // // // // // -->
+
+      <div class="four columns">
+        {# <?php print render($page['footer_firstcolumn']); ?> #}
+        {{ page.footer_firstcolumn }}
+      </div>
+
+      <!-- // // // // // // // // // // -->
+
+      <div class="four columns">
+        {# <?php print render($page['footer_secondcolumn']); ?> #}
+        {{ page.footer_secondcolumn }}
+
+      </div>
+
+      <!-- // // // // // // // // // // -->
+
+      <div class="four columns">
+        {# <?php print render($page['footer_thirdcolumn']); ?> #}
+        {{ page.footer_thirdcolumn }}
+
+      </div>
+
+      <!-- // // // // // // // // // // -->
+
+	  <div class="four columns">
+        {# <?php print render($page['footer_fourthcolumn']); ?> #}
+        {{ page.footer_fourthcolumn }}
+
+      </div>
+
+      <!-- // // // // // // // // // // -->
+
+    </div>
+    <!-- End Footer -->
+  {% endif %}
+
+</div>
+
+<!-- End Region 9 Wrap -->
+
+<!-- Region 10 Wrap -->
+
+<div class="container region10wrap">
+
+  <div class="row footer_bottom">
+
+    <!-- Bottom -->
+
+    <!-- // // // // // // // // // // -->
+
+    <div class="six columns footer_left">
+
+      <p class="copyright"><?php print theme_get_setting('footer_copyright_message', 'touchm'); ?></p>
+
+    </div>
+
+    <!-- // // // // // // // // // // -->
+
+    <div class="six columns footer_right">
+
+      {# <?php print render($page['footer']); ?> #}
+      {{ page.footer }}
+
+    </div>
+
+    <!-- // // // // // // // // // // -->
+
+    <!-- Bottom -->
+
+  </div>
+</div>
+
+<!-- End Region 10 Wrap -->
+
+
+
+<!-- Back To Top -->
+<a href="#" class="scrollup">{{ 'Scroll'|t }}</a>
+<!-- End Back To Top -->

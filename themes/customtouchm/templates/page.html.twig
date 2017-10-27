@@ -1,0 +1,74 @@
+
+<div class="container-fluid custom_main_container global_no_padding {% if user.hasPermission('administer nodes') %} custom_topbar_margin1 {% endif %}">
+  
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 custom_height_fit_content top_social">
+      {{ page.top_nav}}
+      {# <p> Login Block</p>    #}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 custom_height_fit_content">
+      <header id="header"class="header"role="banner">
+    		{{ page.header }}
+    		{# <div id="topbar"class="topbar">
+      		<a href="/"title="Home"rel="home"class="logo"></a>
+        	<hgroup class="name-and-slogan">
+            <h1 class="site-name">
+             	<a href="/"title="Home"rel="home"><span>Drupal jobs</span></a>
+            </h1>
+      		</hgroup>
+   			 </div> #}
+ 		   </header>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 custom_menu_region custom_height_fit_content">
+      {{ page.full_width_menu }}
+  		{# <p>Menu</p>        #}
+  	</div>
+  </div>
+  <div class="row">
+  	<div class="col-md-12 custom_slider_region custom_height_fit_content global_no_padding">
+      {{ page.slider }}
+  		{# <p>Slider</p> #}
+  	</div>
+  </div>
+  <div class="row custom_height_inherit1 custom_min_height">
+  	<div class="{% if page.sidebar_second %} col-md-9 {% else %} col-md-12 {% endif %} custom_main_content_region custom_height_fit_content">
+      {{ page.content }}
+  	</div>
+    {% if page.sidebar_second %}
+  	<div class="col-md-3 custom_sidebar_region custom_height_fit_content">
+      {{ page.sidebar_second }} 
+  	</div>
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-12 custom_search_region global_no_padding custom_height_fit_content">
+      <div class="col-md-9">
+        {{ page.search_one }}
+        <p> <h2 class="search-text">Search this website by keywords or browse from sections below</h2> </p>
+      </div>
+      <div class="col-md-3">
+        {{ page.search_two }}
+      </div>
+      
+    </div>
+  </div>
+  <div class="row footer ">
+  	<div class="col-xs-12 col-sm-6 col-md-3 custom_footer_1_region custom_height_fit_content">
+      {{ page.footer_firstcolumn }}
+  	</div>
+  	<div class="col-xs-12 col-sm-6 col-md-3 custom_footer_2_region custom_height_fit_content">
+      {{ page.footer_secondcolumn }}
+  	</div>
+  	<div class="col-xs-12 col-sm-6 col-md-3 custom_footer_3_region custom_height_fit_content">
+      {{ page.footer_thirdcolumn }}
+  	</div>
+  	<div class="col-xs-12 col-sm-6 col-md-3 custom_footer_4_region custom_height_fit_content">
+      {{ page.footer_fourthcolumn }}
+  	</div>
+  	<div class="col-xs-12 col-sm-12 col-md-12 custom_footer_5_region custom_height_fit_content">
+      {{ page.footer }}
+  	</div>
+  </div>
+</div>

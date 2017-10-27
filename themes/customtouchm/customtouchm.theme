@@ -1,0 +1,10 @@
+<?php 
+function customtouchm_preprocess_html(&$variables) {
+
+$variables['root_path'] = \Drupal::request()->getHost();
+//$variables['is_front'] = drupal_is_front_page();
+$variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+
+
+
+}

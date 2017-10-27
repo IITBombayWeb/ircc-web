@@ -1,0 +1,116 @@
+body,html {
+	height: 100%;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+p {
+	color: white;
+}
+h2 {
+	color: white;
+}
+#toolbar-administration {
+	position: fixed;
+	top: 0;
+	width: 100%;
+    background-color: black;
+    z-index: 9;
+}
+.custom_main_container {
+	height: inherit;
+}
+.custom_topbar_margin {
+	margin-top: 39px;
+}
+.custom_height_inherit {
+	height: inherit;
+}
+.custom_min_height {
+	min-height: 100%;
+}
+.custom_height_fit_content {
+	height: fit-content;
+}
+.block--menu ul.custom_menutab_color{
+	color: white;
+}
+.menu_tab_textcolor ul.menu a {
+    background-color: #fbfbf7;
+    display: block;
+    color: black;
+    padding: 0.4em;
+}
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: #060606;
+}
+.custom_menu_region {
+	background-color: #af0136;
+
+}
+.custom_slider_region {
+	background-color: blue;
+
+}
+.custom_main_content_region {
+	background-color: red;
+	min-height: 100%;
+	height: -webkit-fill-available;
+}
+.custom_sidebar_region {
+	background-color: orange;
+	min-height: 100%;
+	height: -webkit-fill-available;
+}
+.custom_footer_region_color {
+	background-color: #2f2f2f;
+}
+.custom_footer_1_region {
+	background-color: green;
+
+}
+.custom_footer_2_region {
+	background-color: yellow;
+
+}
+.custom_footer_3_region {
+	background-color: orange;
+
+}
+.custom_footer_4_region {
+	background-color: violet;
+
+}
+.custom_footer_5_region {
+	background-color: aqua;
+
+}
+@media (min-width: 800px) {
+	.block-user-menu.block--menu {
+		font-family: "Ubuntu-R";
+		width: none;
+		font-size: .8em;
+	}	
+}
+@media (min-width: 800px) {
+	.block-user-menu.block--menu ul.menu {
+		font-size: 15px;
+		margin-left: 270px;
+		margin-top: 6px;
+	}	
+}
+@media (min-width: 800px) {
+	.block-user-menu.block--menu ul.menu a {
+    	color: #0f0775;
+    	margin-top: 6px; 
+    	padding: 0 !important; 
+ 		font-size: 16px;
+    	background: transparent !important;
+	}	
+}

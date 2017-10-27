@@ -1,0 +1,54 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      vendor/bootstrap/bootstrap.min.css: {}
+      stylesheets/foundation.min.css: {}
+      stylesheets/common-style.css: {}
+      stylesheets/color5.css: {}
+      stylesheets/touchm.css: {}
+      stylesheets/style.css: {}
+
+      
+
+      # stylesheets/subsite-style.css: {}
+
+
+javascript:
+  version: VERSION
+  js:
+    javascripts/jquery.js: {}
+    vendor/bootstrap/bootstrap.min.js: {}
+    javascripts/foundation.min.js: {}
+    javascripts/modernizr.foundation.js: {}
+    javascripts/jquery.tipsy.js: {}
+    javascripts/jquery.carouFredSel-6.0.3-packed.js: {}
+    javascripts/jquery.touchSwipe.min.js: {}
+    javascripts/jquery.isotope.min.js: {}
+    javascripts/app-head.js: {}
+    javascripts/app.js: {}
+    javascripts/custom.js: {}
+    javascripts/jquery.flexnav.min.js: {}
+    sites/all/libraries/tablesorter/jquery.tablesorter.js: {}
+    javascript/custom.js: {}
+
+
+
+  dependencies:
+    - core/jquery
+
+plugin:
+  version: VERSION
+
+  css:
+    theme:
+      plugins/titan/css/jquery.titanlighbox.css: {}
+
+  js:
+    plugins/slider-revolution/jquery.themepunch.plugins.min.js: {}
+    plugins/slider-revolution/jquery.themepunch.revolution.min.js: {}
+    plugins/titan/js/prettify.js: {}
+    plugins/titan/js/jquery.titanlighbox.js: {}
+  dependencies:
+    - core/jquery  
+
