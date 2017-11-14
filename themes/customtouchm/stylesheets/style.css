@@ -131,7 +131,7 @@ h2 {
 .custom_main_content_region {
 	background-color: #FFF;
 	min-height: 100%;
-	height: -webkit-fill-available;
+	height: fit-content;
 }
 .custom_main_content_region p {
 	color: #565656;
@@ -154,6 +154,7 @@ h2 {
 	background-color: #005C9B;
 	text-align: center;
 	padding-top: 10px;
+	width: -webkit-fill-available;
 }
 .footer {
 	background-color: #464646;
