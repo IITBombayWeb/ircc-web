@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available_modes_for_use
+    - node.type.research_facilities
+  module:
+    - text
+id: node.research_facilities.field_available_modes_for_use
+field_name: field_available_modes_for_use
+entity_type: node
+bundle: research_facilities
+label: 'Available modes for use'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+name: yashi
+description: 'Content Type + Custom view + Taxonomy term'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - ds
+  - field
+  - flexslider_fields
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - system
+  - taxonomy
+  - text
+  - user
+  - views

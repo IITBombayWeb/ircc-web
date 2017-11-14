@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_of_specialisation
+    - node.type.profiles
+    - taxonomy.vocabulary.area
+id: node.profiles.field_area_of_specialisation
+field_name: field_area_of_specialisation
+entity_type: node
+bundle: profiles
+label: 'Area of Specialisation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      area: area
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

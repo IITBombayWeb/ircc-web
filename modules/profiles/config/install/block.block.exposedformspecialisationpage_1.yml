@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.specialisation
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: exposedformspecialisationpage_1
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:specialisation-page_1'
+settings:
+  id: 'views_exposed_filter_block:specialisation-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/18\r\n/specialisation"
+    negate: false
+    context_mapping: {  }

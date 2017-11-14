@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_name1
+    - node.type.profiles
+    - node.type.technologies
+id: node.technologies.field_faculty_name1
+field_name: field_faculty_name1
+entity_type: node
+bundle: technologies
+label: 'Faculty Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profiles: profiles
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

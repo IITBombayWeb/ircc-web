@@ -1,0 +1,12 @@
+name: Feature
+type: module
+core: 8.x
+dependencies:
+  - block
+  - field
+  - menu_ui
+  - node
+  - path
+  - system
+  - user
+  - views

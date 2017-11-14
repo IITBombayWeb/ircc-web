@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applications
+    - node.type.research_facilities
+  module:
+    - text
+id: node.research_facilities.field_applications
+field_name: field_applications
+entity_type: node
+bundle: research_facilities
+label: Applications
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

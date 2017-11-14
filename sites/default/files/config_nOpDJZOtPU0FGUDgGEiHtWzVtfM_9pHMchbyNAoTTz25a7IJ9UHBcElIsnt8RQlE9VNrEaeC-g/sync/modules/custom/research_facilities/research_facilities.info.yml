@@ -1,0 +1,20 @@
+name: 'Research Facilities'
+description: 'Provides Research Facilities content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - block
+  - ds
+  - field
+  - file
+  - flexslider_fields
+  - image
+  - menu_ui
+  - node
+  - path
+  - profiles
+  - system
+  - taxonomy
+  - text
+  - user
+  - views

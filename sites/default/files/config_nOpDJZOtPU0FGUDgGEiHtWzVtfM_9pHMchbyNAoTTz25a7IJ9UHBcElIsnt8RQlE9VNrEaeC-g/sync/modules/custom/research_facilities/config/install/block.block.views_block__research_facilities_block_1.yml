@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.research_facilities
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__research_facilities_block_1
+theme: bootstrap
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:research_facilities-block_1'
+settings:
+  id: 'views_block:research_facilities-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /researchfacilities
+    negate: false
+    context_mapping: {  }

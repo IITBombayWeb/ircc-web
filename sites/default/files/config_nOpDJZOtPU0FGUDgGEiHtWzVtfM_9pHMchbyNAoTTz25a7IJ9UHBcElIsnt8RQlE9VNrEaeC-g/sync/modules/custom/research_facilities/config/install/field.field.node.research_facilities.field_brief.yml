@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brief
+    - node.type.research_facilities
+id: node.research_facilities.field_brief
+field_name: field_brief
+entity_type: node
+bundle: research_facilities
+label: Brief
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,150 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_facilities.body
+    - field.field.node.research_facilities.field_applications
+    - field.field.node.research_facilities.field_available_modes_for_use
+    - field.field.node.research_facilities.field_brief
+    - field.field.node.research_facilities.field_department2
+    - field.field.node.research_facilities.field_email1
+    - field.field.node.research_facilities.field_faculty_name2
+    - field.field.node.research_facilities.field_location1
+    - field.field.node.research_facilities.field_make_n_model
+    - field.field.node.research_facilities.field_specifications
+    - field.field.node.research_facilities.field_view
+    - image.style.flexslider_thumbnail
+    - node.type.research_facilities
+  module:
+    - ds
+    - flexslider_fields
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - links
+        - body
+        - field_brief
+        - field_make_n_model
+        - field_specifications
+        - field_applications
+        - field_available_modes_for_use
+        - field_faculty_name2
+        - field_department2
+        - field_location1
+        - field_email1
+      right:
+        - field_view
+id: node.research_facilities.default
+targetEntityType: node
+bundle: research_facilities
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: left
+  field_applications:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_available_modes_for_use:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_brief:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: left
+  field_department2:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: left
+  field_email1:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: left
+  field_faculty_name2:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: left
+  field_location1:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_make_n_model:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_specifications:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_view:
+    weight: 11
+    label: above
+    settings:
+      image_style: flexslider_thumbnail
+      image_link: ''
+      optionset: default
+      caption: ''
+    third_party_settings: {  }
+    type: flexslider
+    region: right
+  links:
+    weight: 0
+    region: left
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

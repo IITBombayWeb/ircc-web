@@ -1,0 +1,115 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_facilities.body
+    - field.field.node.research_facilities.field_applications
+    - field.field.node.research_facilities.field_available_modes_for_use
+    - field.field.node.research_facilities.field_brief
+    - field.field.node.research_facilities.field_department2
+    - field.field.node.research_facilities.field_email1
+    - field.field.node.research_facilities.field_faculty_name2
+    - field.field.node.research_facilities.field_location1
+    - field.field.node.research_facilities.field_make_n_model
+    - field.field.node.research_facilities.field_specifications
+    - field.field.node.research_facilities.field_view
+    - image.style.flexslider_thumbnail
+    - node.type.research_facilities
+  module:
+    - image
+    - text
+    - user
+id: node.research_facilities.default
+targetEntityType: node
+bundle: research_facilities
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_applications:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_available_modes_for_use:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_brief:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_department2:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_email1:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_faculty_name2:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_location1:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_make_n_model:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_specifications:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_view:
+    weight: 108
+    label: above
+    settings:
+      image_style: flexslider_thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,32 @@
+id: basics
+label: Import articles
+migration_groups:
+  - ACME import
+
+source:
+  plugin: csv
+  path: '/var/www/articles.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    0:
+      id: 'Unique Id'
+    1:
+      faculty_name: 'Faculty Name'
+    2:
+      faculty_email_id: 'Faculty Email id'
+    3:
+      department: 'Department'  
+process:
+  faculty_name: faculty_name
+  faculty_email_id: faculty_email_id
+  department: department
+  type:
+    plugin: default_value
+    default_value: article
+
+destination:
+  plugin: entity:node

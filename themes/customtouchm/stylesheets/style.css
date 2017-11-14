@@ -61,7 +61,8 @@ h2 {
     color: #005C9B;
 }
 .nav>li>a:hover {
-	background-color: #4B4B4B !important;
+	background-color: #4b4b4b !important;
+    color: #fff;
 }
 .custom_main_container {
 	height: inherit;
@@ -100,6 +101,19 @@ h2 {
     color: #FFF;
     text-decoration: none;
 }
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	background-color: #FFF;
+	color:#005C9B;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background-color: #FFF !important;
+	color: #005C9B;
+}
+.open>.dropdown-menu {
+    display: block;
+    background-color: #434343;
+    z-index: 1;
+}    
 .custom_slider_region {
 	background-color: #FFF;
 

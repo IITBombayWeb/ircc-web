@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_specifications
+    - node.type.research_facilities
+  module:
+    - text
+id: node.research_facilities.field_specifications
+field_name: field_specifications
+entity_type: node
+bundle: research_facilities
+label: Specifications
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

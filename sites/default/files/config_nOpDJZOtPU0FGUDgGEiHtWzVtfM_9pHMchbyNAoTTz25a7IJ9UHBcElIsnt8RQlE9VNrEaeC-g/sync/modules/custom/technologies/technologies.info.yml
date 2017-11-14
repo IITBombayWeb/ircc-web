@@ -1,0 +1,16 @@
+name: Technologies
+description: 'Provides Technologies content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - block
+  - field
+  - menu_ui
+  - node
+  - path
+  - profiles
+  - system
+  - taxonomy
+  - text
+  - user
+  - views

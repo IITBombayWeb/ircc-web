@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email1
+    - node.type.research_facilities
+id: node.research_facilities.field_email1
+field_name: field_email1
+entity_type: node
+bundle: research_facilities
+label: 'Email Id'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
